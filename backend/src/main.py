@@ -116,6 +116,7 @@ def search_information(state: State) -> Dict:
                     search_depth="advanced",
                     max_results=max(5, state["depth"] * 5),
                     include_domains=[
+                        "arxiv.org",
                         "scholar.google.com",
                         "researchgate.net",
                         "sciencedirect.com",
@@ -128,7 +129,6 @@ def search_information(state: State) -> Dict:
                         "reuters.com",
                         "ft.com",
                         "wsj.com",
-                        "arxiv.org"
                     ],
                     exclude_domains=[
                         "youtube.com",
@@ -486,9 +486,7 @@ def generate_final_report(state: State) -> Dict:
     2. [具体可行的建议2]
     3. [具体可行的建议3]
 
-    ## 9. 参考文献
-
-    [以下参考文献按可信度排序，数据来源为权威研究平台]
+   
     """
 
     response = llm.invoke(report_prompt)
@@ -538,8 +536,7 @@ def generate_final_report(state: State) -> Dict:
             ref_line = f"{i}. [{ref['title']}]({url}) {ref_date}\n\n"  # 确保每个引用后有空行
             references_section += ref_line
         
-        # full_report = f"{formatted_report}\n{references_section}"
-        full_report = f"{formatted_report}"
+        full_report = f"{formatted_report}\n{references_section}"
     else:
         full_report = formatted_report
 

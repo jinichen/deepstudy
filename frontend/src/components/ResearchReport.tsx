@@ -100,23 +100,23 @@ export default function ResearchReport({ report, onBack }: ResearchReportProps) 
                 td: ({node, ...props}) => (
                   <td className="px-4 py-2 text-foreground/80" {...props} />
                 ),
-                code: ({inline, className, children, ...props}: CodeProps) => {
-                  const match = /language-(\w+)/.exec(className || '');
-                  return inline ? (
-                    <code className="px-1.5 py-0.5 mx-0.5 bg-muted rounded text-sm font-mono" {...props}>
-                      {children}
-                    </code>
-                  ) : (
-                    <pre className="p-0 my-6 bg-muted rounded-lg overflow-hidden">
-                      <code 
-                        className={`block p-4 text-sm font-mono overflow-x-auto ${match ? `language-${match[1]}` : ''}`} 
-                        {...props}
-                      >
-                        {children}
-                      </code>
-                    </pre>
-                  )
-                },
+                // code: ({inline, className, children, ...props}: CodeProps) => {
+                //   const match = /language-(\w+)/.exec(className || '');
+                //   return inline ? (
+                //     <code className="px-1.5 py-0.5 mx-0.5 bg-muted rounded text-sm font-mono" {...props}>
+                //       {children}
+                //     </code>
+                //   ) : (
+                //     <pre className="p-0 my-6 bg-muted rounded-lg overflow-hidden">
+                //       <code 
+                //         className={`block p-4 text-sm font-mono overflow-x-auto ${match ? `language-${match[1]}` : ''}`} 
+                //         {...props}
+                //       >
+                //         {children}
+                //       </code>
+                //     </pre>
+                //   )
+                // },
                 strong: ({node, ...props}) => (
                   <strong className="font-bold text-primary" {...props} />
                 ),
