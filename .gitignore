@@ -1,0 +1,12 @@
+.env
+
+backend/bin
+backend/include
+backend/lib
+backend/share
+
+frontend/node_modules
+frontend/.next
+frontend/public
+frontend/.env.local
+frontend/.env.development.local
