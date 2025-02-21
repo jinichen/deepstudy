@@ -71,18 +71,22 @@ To run DeepStudy locally, you need to set up both the frontend and backend compo
    ```bash
    cd backend```
 2. **Create a virtual environment (optional but recommended):**
+   
     python3 -m venv venv
     source venv/bin/activate  # On Linux/macOS
     venv\Scripts\activate  # On Windows
-3. **Install backend dependencies:**
+4. **Install backend dependencies:**
+   
     pip install -r requirement.txt
-4. **Set up environment variables:**
+6. **Set up environment variables:**
+   
     Create a .env file in the backend/ directory.
     Add your Google API Key and Tavily API Key to the .env file:
     GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
     TAVILY_API_KEY=YOUR_TAVILY_API_KEY
     Note: You will need to obtain API keys from Google AI and Tavily to use the application.
-5. **Run the backend server:**
+8. **Run the backend server:**
+   
     python backend/src/main.py
         The backend server will start at http://0.0.0.0:8000.
     Frontend Setup (frontend/)
@@ -93,7 +97,8 @@ To run DeepStudy locally, you need to set up both the frontend and backend compo
             Run the frontend development server:
                 npm run dev # or pnpm run dev or yarn dev
     The frontend application will be accessible at http://localhost:3000.
-6. **Usage**
+10. **Usage**
+    
     Start both the backend and frontend servers as described in the Setup and Installation section.
     Open your browser and navigate to http://localhost:3000.
     Use the Research Form to enter your research topic, select research depth, and focus areas.
